@@ -8,11 +8,22 @@ public class SoundManager : MonoBehaviour
     private AudioSource AudioS;
     public AudioClip BubbleClip;
 
-
     private void Start()
     {
         instance = this;
         AudioS = GetComponent<AudioSource>();
+    }
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            AudioS = GetComponent<AudioSource>();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void BubbleSound()

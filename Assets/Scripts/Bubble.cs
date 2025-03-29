@@ -21,26 +21,24 @@ public class Bubble : MonoBehaviour
 
     void Update()
     {
-        if (Vacuum == true)
+        if (Vacuum)
         {
             Vacuum = false;
             audioSource.PlayOneShot(BubbleSuck);
             SR.enabled = false;
             Destroy(gameObject, BubbleSuck.length);
-            Vacuum = true;
+            return;
         }
 
-        float DestroyTimer = Time.deltaTime;
-       BubbleHealth -= DestroyTimer;
-       if(BubbleHealth < 0f && CanDestroyBool == true)
-            {
+        BubbleHealth -= Time.deltaTime;
+        if (BubbleHealth <= 0f && CanDestroyBool)
+        {
             CanDestroyBool = false;
             audioSource.PlayOneShot(BubblePop);
             SoundManager.instance.BubbleSound();
-            Debug.Log("Destroy Bubble");
             SR.enabled = false;
             Destroy(gameObject, BubblePop.length);
-            CanDestroyBool = true;
         }
     }
+
 }
