@@ -21,7 +21,7 @@ public class Bubble : MonoBehaviour
 
     void Update()
     {
-        if (Vacuum == true)
+        if (Vacuum == true && BubbleHealth > 0)
         {
             Vacuum = false;
             audioSource.PlayOneShot(BubbleSuck);
