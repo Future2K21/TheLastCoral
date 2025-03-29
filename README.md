@@ -48,21 +48,4 @@ You are a scuba diver tasked with saving the last living coral in the ocean. Ris
 
 ---
 
-## 🕹️ Jam Info
-
-- **Event:** Pace x Parsons Game Jam 2025
-- **Duration:** 2 Days
-- **Theme:** Environmental Awareness & Cooperation
-- **Team:** Students from Pace University and Parsons School of Design
-
----
-
-## 📦 Future Plans
-
-- Deployment on an arcade machine running Linux.
-- Potential improvements to level design, hazards, and visual polish.
-- Custom-built cabinet with analog controls (TBD).
-
----
-
 Thanks for playing and helping save **The Last Coral** 🪸
