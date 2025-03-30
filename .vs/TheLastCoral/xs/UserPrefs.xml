@@ -1,13 +1,18 @@
 ﻿<Properties StartupConfiguration="{0642BE73-A340-8A5C-1B0A-B32531C0CB19}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Moving Script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Coral.cs">
     <Files>
-      <File FileName="Assets/Scripts/Bubble.cs" Line="11" Column="33" />
+      <File FileName="Assets/Scripts/Bubble.cs" Line="37" Column="36" />
       <File FileName="Assets/Scripts/Moving Script.cs" Line="15" Column="36" />
+      <File FileName="Assets/Scripts/BubbleCreator.cs" Line="11" Column="1" />
+      <File FileName="Assets/SpawnFish.cs" Line="21" Column="32" />
+      <File FileName="Assets/FishMovement.cs" Line="16" Column="29" />
+      <File FileName="Assets/Coral.cs" Line="9" Column="9" />
+      <File FileName="Assets/GameManager.cs" Line="18" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7258bbb3-270b-4fb8-9562-ee743a8e08cb" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9bb4b950-eedc-4ef3-91f3-bbc85f035019" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

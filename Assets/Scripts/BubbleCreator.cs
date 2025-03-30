@@ -16,7 +16,7 @@ public class BubbleCreator : MonoBehaviour
     [System.Obsolete]
     public void SpawnBubbles()
     {
-        var position = new Vector3(Random.Range(-9.0f, 9.0f), Random.Range(-4.5f, 4.5f), 0);
+        var position = new Vector3(Random.Range(-8.0f, 8.0f), Random.Range(-5.5f, 2.5f), 0);
         Instantiate(BubblePrefab,position, Quaternion.identity);
         Debug.Log("Spawned Bubble");
 

@@ -23,6 +23,7 @@ public class Bubble : MonoBehaviour
     {
         if (Vacuum && BubbleHealth > 0)
         {
+            GameManager.PH += 0.1f;
             Vacuum = false;
             audioSource.PlayOneShot(BubbleSuck);
             SR.enabled = false;
@@ -33,9 +34,9 @@ public class Bubble : MonoBehaviour
         BubbleHealth -= Time.deltaTime;
         if (BubbleHealth <= 0f && CanDestroyBool)
         {
+            GameManager.PH -= 0.1f;
             CanDestroyBool = false;
             audioSource.PlayOneShot(BubblePop);
-            SoundManager.instance.BubbleSound();
             SR.enabled = false;
             Destroy(gameObject, BubblePop.length);
         }
