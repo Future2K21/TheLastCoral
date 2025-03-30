@@ -98,7 +98,8 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire2") && Vector2.Distance(transform.position, otherPlayer.transform.position) < oxygenShareDistance)
         {
-            Debug.Log("Shared O2");
+            float SplitOxygen = otherPlayer.oxygen + oxygen;
+            otherPlayer.oxygen = SplitOxygen / 2;
             UpdateOxygenUI();
         }
     }
