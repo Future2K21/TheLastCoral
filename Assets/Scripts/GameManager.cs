@@ -1,31 +1,29 @@
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static float PH = 7.0f;
     public Coral coral;
+    public TextMeshProUGUI PHText;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         PH = 7.0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Debug.Log(PH);
         coral.GameOver();
+        UpdatePHUI();
     }
 
-    public void PHSubtract()
+
+    void UpdatePHUI()
     {
-        PH -= 0.1f;
+        if (PHText != null)
+        {
+            PHText.text = "pH: " + PH.ToString("F1"); 
+        }
     }
-    public void PHAdd()
-    {
-        PH += 0.1f;
-    }
-
-
 }

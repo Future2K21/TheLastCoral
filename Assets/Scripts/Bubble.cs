@@ -42,4 +42,9 @@ public class Bubble : MonoBehaviour
         }
     }
 
+    public void SetTrue()
+    {
+        Vacuum = true;
+    }
+
 }

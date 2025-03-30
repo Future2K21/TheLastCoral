@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Coral : MonoBehaviour
 {
     public float coralHealth = 30f;
+    public string GameOverScene;
     public float maxHealth = 30f;
     private SpriteRenderer spriteRenderer;
     public Color coralColor;
@@ -38,7 +40,7 @@ public class Coral : MonoBehaviour
     {
         if (coralHealth < 0f)
         {
-            Debug.Log("GameOver");
+            SceneManager.LoadScene(GameOverScene);
         }
     }
 }
