@@ -117,6 +117,12 @@ public class PlayerController : MonoBehaviour
         {
             isInAirZone = true;
         }
+        if (other.CompareTag("Bubble"))
+        {
+            Bubble b = other.GetComponent<Bubble>();
+            b.Vacuum = true;
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D other)

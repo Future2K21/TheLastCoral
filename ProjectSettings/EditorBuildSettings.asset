@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 08a29be61c5ff4e0ab7eb94d3fdb161e
   - enabled: 1
-    path: Assets/Scenes/FishDemo.unity
+    path: Assets/Scenes/1Player.unity
     guid: 0ca30a9dbfbdc4e8c82268a9e70a6fe5
   - enabled: 1
     path: Assets/Scenes/GameOver.unity

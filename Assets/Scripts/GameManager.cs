@@ -7,13 +7,18 @@ public class GameManager : MonoBehaviour
     public Coral coral;
     public TextMeshProUGUI PHText;
 
+    public static float GameTimer;
+
     void Start()
     {
         PH = 7.0f;
+        GameTimer = 0f;
     }
 
     void Update()
     {
+        GameTimer += Time.deltaTime;
+
         coral.GameOver();
         UpdatePHUI();
     }
