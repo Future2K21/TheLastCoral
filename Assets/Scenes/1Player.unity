@@ -1560,6 +1560,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938156698}
   m_CullTransparentMesh: 1
+--- !u!1 &1197082748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197082750}
+  - component: {fileID: 1197082749}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1197082749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197082748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: dd7150d4f91594bc3aaea6a85ee5bff6, type: 2}
+--- !u!4 &1197082750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197082748}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3572985, y: 0.16217601, z: -0.04643128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1257475663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,6 +1882,7 @@ GameObject:
   - component: {fileID: 1551392071}
   - component: {fileID: 1551392068}
   - component: {fileID: 1551392067}
+  - component: {fileID: 1551392072}
   m_Layer: 6
   m_Name: Player1
   m_TagString: Player
@@ -1977,7 +2027,7 @@ Transform:
   m_GameObject: {fileID: 1551392066}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: -4, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2010,6 +2060,28 @@ MonoBehaviour:
   verticalInput: Vertical
   isPlayerOne: 1
   otherPlayer: {fileID: 897850640}
+--- !u!95 &1551392072
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551392066}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cc0341867bc74914b1d5db575f9c804, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1569351778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,9 +2296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6bcdaad8c75b4dd4880ed974021d9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coralHealth: 30
+  coralHealth: 15
   GameOverScene: GameOver
-  maxHealth: 30
+  maxHealth: 15
   coralColor: {r: 0.38467455, g: 0, b: 1, a: 1}
 --- !u!212 &1840198968
 SpriteRenderer:
@@ -2849,3 +2921,4 @@ SceneRoots:
   - {fileID: 900402456}
   - {fileID: 301906963}
   - {fileID: 122467948}
+  - {fileID: 1197082750}

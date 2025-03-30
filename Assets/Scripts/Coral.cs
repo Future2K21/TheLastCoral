@@ -40,6 +40,7 @@ public class Coral : MonoBehaviour
     {
         if (coralHealth < 0f)
         {
+            GameManager.gameOver = true;
             SceneManager.LoadScene(GameOverScene);
         }
     }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Bubble : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Bubble : MonoBehaviour
     {
         Vacuum = false;
         CanDestroyBool = true;
+        StartCoroutine("Flash");
     }
 
 
@@ -45,6 +47,37 @@ public class Bubble : MonoBehaviour
     public void SetTrue()
     {
         Vacuum = true;
+    }
+
+    public IEnumerator Flash()
+    {
+        yield return new WaitForSeconds(8);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 1f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 1f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 1f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 1f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 1f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 1f);
+        yield return new WaitForSeconds(0.2f);
+
+
     }
 
 }

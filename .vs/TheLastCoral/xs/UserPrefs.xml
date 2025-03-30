@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{0642BE73-A340-8A5C-1B0A-B32531C0CB19}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameStart.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpawnFish.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="20" Column="37" />
-      <File FileName="Assets/Scripts/Bubble.cs" />
-      <File FileName="Assets/Scripts/BubbleCreator.cs" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="27" Column="26" />
+      <File FileName="Assets/Scripts/Bubble.cs" Line="72" Column="45" />
+      <File FileName="Assets/Scripts/BubbleCreator.cs" Line="13" Column="55" />
       <File FileName="Assets/Scripts/PlayerController.cs" />
-      <File FileName="Assets/Scripts/SpawnFish.cs" />
-      <File FileName="Assets/SceneStart.cs" Line="22" Column="1" />
-      <File FileName="Assets/Scripts/Coral.cs" />
-      <File FileName="Assets/ShareAir.cs" />
-      <File FileName="Assets/GameStart.cs" Line="6" Column="21" />
+      <File FileName="Assets/Scripts/SpawnFish.cs" Line="1" Column="1" />
+      <File FileName="Assets/SceneStart.cs" Line="37" Column="75" />
+      <File FileName="Assets/Scripts/Coral.cs" Line="42" Column="10" />
+      <File FileName="Assets/ShareAir.cs" Line="5" Column="28" />
+      <File FileName="Assets/GameStart.cs" Line="18" Column="9" />
+      <File FileName="Assets/HighScore.cs" Line="6" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
