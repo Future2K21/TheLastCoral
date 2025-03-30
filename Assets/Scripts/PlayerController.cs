@@ -4,12 +4,16 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 3f;
+
+    public float maxSpeed = 3f;
+
     public float verticalSpeedMultiplier = 0.6f;
     public float maxOxygen = 100f;
     public float oxygen = 100f;
     public float oxygenDepletionRate = 5f;
     public float oxygenTransferRate = 20f; 
-    public KeyCode shareOxygenKey = KeyCode.K; 
+    public KeyCode shareOxygenKey = KeyCode.K;
+    public float oxygenShareDistance = 3;
     public Image oxygenBar;
     private SpriteRenderer spriteRenderer;
 
@@ -20,6 +24,9 @@ public class PlayerController : MonoBehaviour
     float moveX;
     float moveY;
     public bool isPlayerOne;
+
+    public PlayerController otherPlayer;
+
 
     void Start()
     {
@@ -40,8 +47,22 @@ public class PlayerController : MonoBehaviour
         {
             moveX = Input.GetAxis(horizontalInput) * moveSpeed;
             moveY = Input.GetAxis(verticalInput) * moveSpeed * verticalSpeedMultiplier;
-            rb.linearVelocity = new Vector2(moveX, moveY);
+            //rb.linearVelocity = new Vector2(moveX, moveY);
+            rb.AddForce(new Vector2(moveX, moveY), ForceMode2D.Force);
+
         }
+        if (rb.linearVelocity.magnitude > maxSpeed) { 
+            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+        }
+        if (transform.position.x > 9) {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            transform.position = new Vector2(9f, transform.position.y);
+        }
+        if (transform.position.x < -9) {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            transform.position = new Vector2(-9f, transform.position.y);
+        }
+
     }
     void FlipSprite()
     {
@@ -75,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     public void ShareOxygen()
     {
-        if(Input.GetKeyDown(shareOxygenKey))
+        if(Input.GetButtonDown("Fire2") && Vector2.Distance(transform.position, otherPlayer.transform.position) < oxygenShareDistance)
         {
             Debug.Log("Shared O2");
             UpdateOxygenUI();
