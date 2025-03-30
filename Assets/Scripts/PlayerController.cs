@@ -14,26 +14,17 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private Rigidbody2D rb;
-    private string horizontalInput;
-    private string verticalInput;
+    public string horizontalInput;
+    public string verticalInput;
     private bool isInAirZone = false;
     float moveX;
     float moveY;
     public bool isPlayerOne;
 
-    [System.Obsolete]
     void Start()
     {
-        if (isPlayerOne)
-        {
-            moveX = Input.GetAxis("Horizontal");
-            moveY = Input.GetAxis("Vertical");
-        }
-        else
-        {
-            moveX = Input.GetAxis("Horizontal");
-            moveY = Input.GetAxis("Vertical2");
-        }
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -84,8 +75,11 @@ public class PlayerController : MonoBehaviour
 
     public void ShareOxygen()
     {
-        
-        UpdateOxygenUI();
+        if(Input.GetKeyDown(shareOxygenKey))
+        {
+            Debug.Log("Shared O2");
+            UpdateOxygenUI();
+        }
     }
 
     void UpdateOxygenUI()

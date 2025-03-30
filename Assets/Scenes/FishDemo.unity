@@ -1114,6 +1114,8 @@ MonoBehaviour:
   oxygenTransferRate: 20
   shareOxygenKey: 108
   oxygenBar: {fileID: 938156700}
+  horizontalInput: Horizontal2
+  verticalInput: Vertical2
   isPlayerOne: 0
 --- !u!212 &897850641
 SpriteRenderer:
@@ -1973,6 +1975,8 @@ MonoBehaviour:
   oxygenTransferRate: 20
   shareOxygenKey: 107
   oxygenBar: {fileID: 2035811250}
+  horizontalInput: Horizontal
+  verticalInput: Vertical
   isPlayerOne: 1
 --- !u!1 &1569351778
 GameObject:
